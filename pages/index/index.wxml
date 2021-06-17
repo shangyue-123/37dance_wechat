@@ -1,0 +1,48 @@
+<!-- 点击搜索，跳转进入搜索页 -->
+<van-nav-bar >
+  <view slot="left"  style="width:500rpx;padding:0rpx;">
+    <van-search
+    placeholder="请输入搜索内容"
+    shape="round"  
+    bind:focus = "toSearch"
+    />
+  </view>
+</van-nav-bar>
+
+<!-- 标签栏显示舞种 -->
+<van-tabs id="tabs" active="{{ active }} sticky animated">
+  <block wx:for="{{tab_array}}" wx:key="*this">
+    <van-tab title="{{item.title}}"></van-tab>
+  </block>
+</van-tabs>
+
+<!-- 调用轮播图组件 -->
+<Swiper imgUrls="{{imgUrls}}" style="margin-bottom: 140rpx;"/> 
+
+<!-- 功能跳转 -->
+<van-grid column-num="3">
+  <block wx:for="{{ grad }}" wx:key="*this">
+    <van-grid-item 
+    icon="photo-o" 
+    text="{{ item.text }}" 
+    url="{{ item.url }}"
+    link-type="{{ item.link_type }}"
+     />
+  </block> 
+</van-grid>
+
+<!-- 展示视频课程 -->
+<van-cell title="推荐课程" is-link value="更多" link-type="switchTab" url="/pages/course/course" />
+<block wx:for="{{ moon_card }}" wx:key="*this">
+  <moon_card
+  src="{{ item.src }}"
+  value="{{ item.value }}"
+  title="{{ item.title }}"
+  tag_message="{{ item.tag_message }}"
+  tag_color="{{ item.tag_color }}"
+  label="{{ item.label }}"
+  />
+</block>
+
+
+<view style="padding-bottom: 168rpx;"></view>

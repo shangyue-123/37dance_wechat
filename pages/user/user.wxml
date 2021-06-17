@@ -1,0 +1,51 @@
+<!--pages/user/user.wxml-->
+<!-- 标题栏 -->
+<van-nav-bar
+  title="标题"
+  left-text="返回"
+  right-text="按钮"
+  left-arrow
+  fixed
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+
+<view style="margin-top:190rpx"></view>
+
+
+<view class="moon-card">
+    <van-card
+    desc="手机号码"
+    title="殇月"
+    >
+    <view slot="thumb">
+        <van-image
+        round
+        width="150rpx"
+        height="150rpx"
+        src="https://img.yzcdn.cn/vant/cat.jpeg"
+        />
+    </view>
+    <view slot="desc" >
+        手机号码
+    </view>
+</van-card>
+    <van-grid>
+        <van-grid-item icon="photo-o" text="文字" />
+        <van-grid-item icon="photo-o" text="文字" />
+        <van-grid-item icon="photo-o" text="文字" />
+        <van-grid-item icon="photo-o" text="文字" />
+    </van-grid>
+</view>
+
+
+<view class="moon-card" style="margin-top:50rpx">
+    <van-cell title="更多功能"  />
+    <van-grid column-num="3">
+        <van-grid-item icon="photo-o" text="文字" wx:for="{{ 6 }}" wx:key="*this" />
+    </van-grid>
+</view>
+
+
+
+

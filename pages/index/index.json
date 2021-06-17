@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "Swiper" : "../../components/swiper/theSwiper",
+    "van-search": "@vant/weapp/search/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-card": "@vant/weapp/card/index",
+    "moon_card": "/components/moon_card/moon_card"
+  },
+  "navigationBarTitleText":"首页"
+}

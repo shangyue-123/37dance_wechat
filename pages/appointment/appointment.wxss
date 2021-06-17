@@ -1,0 +1,5 @@
+/* pages/exercise/exercise.wxss */
+
+.ss{
+    margin-bottom: 100rpx;
+}

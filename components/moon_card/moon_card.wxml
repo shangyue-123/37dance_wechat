@@ -1,0 +1,14 @@
+<view class="moon-card">
+  <image src="{{src}}"
+  lazy-load class="card-image"
+  />
+  <van-cell  value="{{value}}" use-label-slot is-link>
+    <view slot="title">
+      <text style="margin-right:10rpx">{{title}}</text>
+      <van-tag type="{{tag_color}}">{{tag_message}}</van-tag>
+    </view>
+    <view slot="label">
+      {{label}}
+    </view>
+  </van-cell> 
+</view>

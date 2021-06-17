@@ -1,0 +1,15 @@
+/* components/color_card/color_card.wxss */
+.moon-card{
+    display: block;
+    overflow: hidden;
+    background-color: chocolate;
+    border-radius: 10rpx;
+    margin: 20rpx 10rpx;
+    box-shadow: 5rpx 5rpx 20rpx rgba(0, 0, 0,0.5);
+}
+
+.card-image{
+    display: block;
+    height: 300rpx;
+    width: 100%;
+}

@@ -1,0 +1,36 @@
+<!-- 标题栏 -->
+<van-nav-bar
+  title="标题"
+  left-text="返回"
+  right-text="按钮"
+  z-index='999'
+  left-arrow
+  fixed
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+<view style="margin-top:170rpx"></view>
+
+<!-- 标签 -->
+<van-tabs id="tabs" active="{{ active }} sticky animated">
+  <block wx:for="{{tab_array}}" wx:key="*this">
+    <van-tab title="{{item.title}}"></van-tab>
+  </block>
+</van-tabs>
+
+<!-- 卡片 -->
+<block wx:for="{{ moon_card }}" wx:key="*this">
+  <moon_card
+  src="{{ item.src }}"
+  value="{{ item.value }}"
+  title="{{ item.title }}"
+  tag_message="{{ item.tag_message }}"
+  tag_color="{{ item.tag_color }}"
+  label="{{ item.label }}"
+/>
+</block>
+
+<view style="padding-bottom: 168rpx;"></view>
+
+  
+

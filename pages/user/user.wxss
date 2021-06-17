@@ -1,0 +1,7 @@
+/* pages/user/user.wxss */
+@import"/components/moon_card/moon_card.wxss";
+
+.van-card__thumb{
+    height: 150rpx!important;
+    width: 150rpx!important;
+}

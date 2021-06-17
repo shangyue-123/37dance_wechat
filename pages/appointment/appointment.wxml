@@ -1,0 +1,33 @@
+<!-- 标题栏 -->
+<van-nav-bar
+  title="标题"
+  left-text="返回"
+  right-text="按钮"
+  left-arrow
+  bind:click-left="onClickLeft"
+  bind:click-right="onClickRight"
+/>
+
+<!-- 下拉菜单 -->
+<van-dropdown-menu active-color="#1989fa">
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+
+<!-- 商品卡片 -->
+<block wx:for="{{ card }}" wx:key="*this">
+    <van-cell title="{{ item.cell_title }}" is-link value="课程详情" />
+    <van-card
+    tag="{{ item.tag }}"
+    price="{{ item.price }}"
+    desc="{{ item.desc }}"
+    title="{{ item.card_title }}"
+    thumb="{{ item.thumb }}"
+    >
+    <view slot="footer" >
+        <van-button type="danger" size="small" round>预约</van-button>
+    </view>
+    </van-card>
+</block>
+
+<view style="padding-bottom: 100rpx;"></view>
